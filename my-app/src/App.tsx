@@ -13,7 +13,8 @@ import {
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 
-export const App = () => (
+export const App = () => {
+  return (
   <ChakraProvider theme={theme}>
     <Box fontSize="xl">
       <header>
@@ -40,4 +41,5 @@ export const App = () => (
       </Grid>
     </Box>
   </ChakraProvider>
-)
+  )
+}
