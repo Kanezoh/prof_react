@@ -6,16 +6,26 @@ import {
   Center,
   Link as ChakraLink,
   Box,
-  useColorMode,
 } from "@chakra-ui/react";
+import { Link as ReachLink, Route, Routes } from "react-router-dom";
+import Skill from "./Skill";
 import Header from "../components/Header";
-import { Link as ReachLink } from "react-router-dom";
 
 export const Home = () => {
-  const { colorMode } = useColorMode();
   return (
-    <Box backgroundColor={colorMode === "light" ? "#67A7CC" : "black"}>
+    <Box paddingBottom={5}>
       <Header />
+      <HomeContent />
+      <Routes>
+        <Route path="/skill" element={<Skill />} />
+      </Routes>
+    </Box>
+  );
+};
+
+const HomeContent = () => {
+  return (
+    <>
       <Box p={2}>
         <Center fontSize="xl">
           <Grid>
@@ -42,12 +52,16 @@ export const Home = () => {
           <ChakraLink as={ReachLink} to="/todo" textDecoration={"underline"}>
             TODO
           </ChakraLink>
-          <ChakraLink as={ReachLink} to="/blog" textDecoration={"underline"}>
+          <ChakraLink
+            href="https://kanezoh.hateblo.jp/"
+            textDecoration={"underline"}
+            isExternal
+          >
             Blog
           </ChakraLink>
         </VStack>
       </Box>
-    </Box>
+    </>
   );
 };
 
