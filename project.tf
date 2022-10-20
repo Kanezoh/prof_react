@@ -5,4 +5,5 @@ resource "vercel_project" "with_git" {
     # ユーザー名/リポジトリ名
     repo = "Kanezoh/prof_react"
   }
+  root_directory = "my-app"
 }
