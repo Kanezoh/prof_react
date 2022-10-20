@@ -10,6 +10,8 @@ import {
 import { Link as ReachLink, Route, Routes } from "react-router-dom";
 import Skill from "./Skill";
 import Header from "../components/Header";
+import Todo from "./Todo";
+import Work from "./Work";
 
 export const Home = () => {
   return (
@@ -18,6 +20,8 @@ export const Home = () => {
       <HomeContent />
       <Routes>
         <Route path="/skill" element={<Skill />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/works" element={<Work />} />
       </Routes>
     </Box>
   );
@@ -46,11 +50,14 @@ const HomeContent = () => {
           <ChakraLink as={ReachLink} to="/skill" textDecoration={"underline"}>
             Skill
           </ChakraLink>
+          <ChakraLink as={ReachLink} to="/works" textDecoration={"underline"}>
+            Works
+          </ChakraLink>
           <ChakraLink as={ReachLink} to="/profile" textDecoration={"underline"}>
             Profile
           </ChakraLink>
           <ChakraLink as={ReachLink} to="/todo" textDecoration={"underline"}>
-            TODO
+            Todo
           </ChakraLink>
           <ChakraLink
             href="https://kanezoh.hateblo.jp/"

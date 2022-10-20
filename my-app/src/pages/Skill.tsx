@@ -1,9 +1,9 @@
 import React from "react";
 import {
   Box,
-  Grid,
   GridItem,
   ListItem,
+  Stack,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
@@ -17,7 +17,7 @@ const Skill = () => {
           技術スタック
         </Text>
       </VStack>
-      <Grid pr={5} pl={5}>
+      <Stack alignItems={"center"} pr={"10vw"} pl={"10vw"}>
         <GridItem colStart={3} colEnd={6}>
           <UnorderedList>
             <ListItem>Ruby(Rails)</ListItem>
@@ -26,13 +26,13 @@ const Skill = () => {
             <ListItem>MySQL</ListItem>
           </UnorderedList>
         </GridItem>
-      </Grid>
+      </Stack>
       <VStack>
         <Text fontWeight={"bold"} pb={5}>
           経歴
         </Text>
       </VStack>
-      <GridItem pr={5} pl={5}>
+      <Stack pr={"10vw"} pl={"10vw"}>
         <UnorderedList spacing={"2"}>
           <ListItem>2020/02 ~ 2022/02: </ListItem>
           <Text fontSize={"lg"}>
@@ -42,10 +42,10 @@ const Skill = () => {
           <Text fontSize={"lg"}>
             SaaS企業に新卒入社。社内のデータ基盤に関わる部署に配属され、TypeScriptを使ったバックエンド(NestJS),
             フロントエンド(React,
-            Next.js)開発を行なっている。たまにインフラ(AWS)のコード(terraform)なども書く。
+            Next.js)開発を行なっている。たまにインフラ(AWS)のコード(terraform)なども書くがナンモワカラン。
           </Text>
         </UnorderedList>
-      </GridItem>
+      </Stack>
     </Box>
   );
 };
